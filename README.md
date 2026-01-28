@@ -1,2 +1,4 @@
-# portfolio-website
-Personal portfolio website built using HTML and CSS to showcase my skills, projects, and contact details.
+music-player-ui/
+├── index.html
+├── style.css
+└── README.md
