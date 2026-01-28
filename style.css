@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+
+/* Player Container */
+.music-player {
+  width: 320px;
+  background: #111;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.music-player:hover {
+  transform: translateY(-5px);
+}
+
+/* Album Art */
+.album-art {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Song Info */
+.song-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.song-info h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.song-info p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Progress Bar */
+.progress {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress span {
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  animation: progressMove 4s linear infinite;
+}
+
+@keyframes progressMove {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.controls button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #4facfe;
+  transform: scale(1.1);
+}
+
+.controls .play {
+  background: #4facfe;
+}
+
+.controls .play:hover {
+  background: #00f2fe;
+}
+
+/* Volume Bar */
+.volume {
+  margin-top: 20px;
+}
+
+.volume input {
+  width: 100%;
+  accent-color: #4facfe;
+  cursor: pointer;
+}
